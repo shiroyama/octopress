@@ -2,10 +2,10 @@
 #      Main Configs       #
 # ----------------------- #
 
-url: http://srym.github.io
-title: My Octopress Blog
-subtitle: A blogging framework for hackers.
-author: Your Name
+url: http://blog.shiroyama.us
+title: 東洋太平洋ブログ三日坊主チャンピオン
+subtitle: 〜ダメエンジニアの独り言〜
+author: Fumihiko Shiroyama
 simple_search: http://google.com/search
 description:
 
