@@ -35,7 +35,7 @@ GitHub に `your_name.github.io` というリポジトリを作成して push �
 リポジトリのルートに CNAME というファイルを設置し、中に独自ドメインを記入することで独自ドメインも利用可能。
 
 ```bash
-cat<<'EOS'>CNAME
+% cat<<'EOS'>CNAME
 blog.your-domain.com
 EOS
 ```
