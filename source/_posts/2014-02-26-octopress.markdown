@@ -115,7 +115,7 @@ cd -
 
 このタスクを実行すると、以下のように GitHub Pages のリポジトリが自動的に origin に指定される。
 
-```
+```bash
 % git remote -v
 octopress       git://github.com/imathis/octopress.git (fetch)
 octopress       git://github.com/imathis/octopress.git (push)
@@ -216,6 +216,25 @@ Octopress で唯一面倒なのが画像を載せる方法だが、出来ない�
 bundle exec rake deploy
 ```
 
+もしデプロイに失敗したらエラーログを注意深く眺める必要があるが、もしかしたら `bundle exec rake setup_github_pages` したときに既に your_name.github.io が存在していて fast-forward ではないせいで git push に失敗しているのかもしれない。  
+その場合は Rakefile を開き、`git push -f origin` にして force push してやれば良い。
+
+git push -f の意味が分からない人は無闇に実行しないこと。当ブログでは責任を一切持てない。
+
+
+```ruby
+262   cd "#{deploy_dir}" do
+263     system "git add -A"
+264     puts "\n## Committing: Site updated at #{Time.now.utc}"
+265     message = "Site updated at #{Time.now.utc}"
+266     system "git commit -m \"#{message}\""
+267     puts "\n## Pushing generated #{deploy_dir} website"
+268     #system "git push origin #{deploy_branch}"
+269     system "git push -f origin #{deploy_branch}"
+270     puts "\n## Github Pages deploy complete"
+271   end
+```
+
 ### Octopress で独自ドメインを利用する
 
 `source/CNAME` に独自ドメインを記述するだけである。  
@@ -244,6 +263,31 @@ twitter_tweet_button: true
 # Google +1
 google_plus_one: true
 google_plus_one_size: medium
+```
+
+### octopress リモートリポジトリも自分で管理したい
+
+octopress を clone してきて普通にセットアップすると、以下のように octopress リモートリポジトリは開発元の imathis リポジトリを指すことになると思う。
+
+```bash
+% git remote -v
+octopress       git://github.com/imathis/octopress.git (fetch)
+octopress       git://github.com/imathis/octopress.git (push)
+```
+
+個人的には、原稿の元になる octopress リポジトリも自分のリポジトリに管理してどこででもブログを書きたい。  
+その場合には以下のようにすれば出来た。
+
+1. octopress のリポジトリから自分のリポジトリに **fork** する。
+1. fork した自分のリポジトリを clone する。
+1. 以下、全く同じように `bundle exec rake setup_github_pages` する。
+
+```bash
+% git remote -v
+octopress       git@github.com:srym/octopress.git (fetch)
+octopress       git@github.com:srym/octopress.git (push)
+
+% git push octopress source
 ```
 
 ### その他
