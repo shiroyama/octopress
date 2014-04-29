@@ -3,7 +3,7 @@ layout: post
 title: "Android エンジニアが DeployGate を知らないのは恥と心得よ"
 date: 2014-03-18 23:43:44 +0900
 comments: true
-categories: Android
+categories: Android, DeployGate
 ---
 
 [DeployGate](https://deploygate.com/?locale=ja "DeployGate") は Android 開発においてもはや欠かすことが出来ない。  
@@ -49,7 +49,7 @@ Developer Console でのベータ配布は本番アプリのストア配布と�
 
 #### 3. バージョン番号を上げないとアップロードし直せない
 
-PlayStore で修正した apk をアップロードするには、Android が内部で持っている *versionCode* を上げてやらねばならない。  
+Developer Console で修正した apk をアップロードするには、Android が内部で持っている *versionCode* を上げてやらねばならない。  
 本来はアプリの純然たる識別子としてのバージョンコードが、配布ミスや漏れのたびに数字が上がっていくという残念な状況になるのだ。
 
 これらはすべて、ベータ配布が悪いというわけではなく、前述のとおり思想の違いである。**開発サイクルを短く回すためにベータ配布を使うのがそもそも使い方として間違っている**のだ。
@@ -158,6 +158,24 @@ Android アプリに修正を加え、新しいバージョンをテスト配布
 すぐさま新機能の更新を確認することが出来た！なんと簡単なのか！
 
 {% img /images/deploygate/deploygate22.jpg 'deploygate update app 03' 'deploygate update app 03' %}
+
+### 開発者やテスタを追加しよう
+
+自分以外の開発者やテスターの方ににテスト配布してみよう。これもとても簡単だ。
+
+招待したい人のメールアドレスを入力し、開発者かテスタか選ぶ。  
+開発者として追加した場合には今自分がやっているのと同等の権限がメンバに与えられる。  
+テスタとして追加した場合にはアプリのテストのみが行える。
+
+{% img /images/deploygate/deploygate23.jpg 'deploygate test distribution 01' 'deploygate test distribution 01' %}
+
+招待されるとメールが届くのでリンクをクリックする。
+
+{% img /images/deploygate/deploygate24.jpg 'deploygate test distribution 02' 'deploygate test distribution 02' %}
+
+メンバとして追加された！後はこれまでに見てきたのと同じようにテスト配布を受け取ることができる！説明の必要がないほど直感的で簡単である。
+
+{% img /images/deploygate/deploygate25.jpg 'deploygate test distribution 03' 'deploygate test distribution 03' %}
 
 ### まとめ
 

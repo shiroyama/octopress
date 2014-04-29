@@ -3,7 +3,7 @@ layout: post
 title: "恥ずかしながら31歳になりました"
 date: 2014-04-28 23:18:46 +0900
 comments: true
-categories: 
+categories: Life
 ---
 
 31歳になった。  

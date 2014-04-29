@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "'エンジニアのブログは Octopress が最適'"
+title: "エンジニアのブログは Octopress が最適"
 date: 2014-02-26 23:54:23 +0900
 comments: true
 categories: Octopress
