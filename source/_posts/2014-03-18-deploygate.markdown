@@ -3,7 +3,7 @@ layout: post
 title: "Android エンジニアが DeployGate を知らないのは恥と心得よ"
 date: 2014-03-18 23:43:44 +0900
 comments: true
-categories: Android, DeployGate
+categories: Android DeployGate
 ---
 
 [DeployGate](https://deploygate.com/?locale=ja "DeployGate") は Android 開発においてもはや欠かすことが出来ない。  
