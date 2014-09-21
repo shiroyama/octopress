@@ -4,7 +4,7 @@
 
 url: http://blog.shiroyama.us
 title: 白山軟件有限公司
-subtitle: 東洋太平洋ブログ三日坊主チャンピオンのブログ
+subtitle:
 author: Fumihiko Shiroyama
 simple_search: http://google.com/search
 description:
@@ -100,4 +100,4 @@ google_analytics_tracking_id: UA-22050152-1
 facebook_like: true
 
 # linked in
-linkedin_user: fumihikoshiroyama
+# linkedin_user: fumihikoshiroyama
