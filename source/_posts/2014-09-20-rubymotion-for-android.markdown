@@ -414,7 +414,15 @@ RubyMotion for Android はまだドキュメントも満足に揃っていない
 
 ##### 注釈
 
-※1 Android の場合、ランタイムは Dalvik でも ART でもちゃんと動く。詳しくはよく分かってないのだが、Dalvik 環境下では Ruby のコードから DEX を、ART 環境下では LLVM が解釈できるコードをそれぞれ直接吐き出しているのだろうか？詳しい方教えてください。
+※1 Android の場合、ランタイムは Dalvik でも ART でもちゃんと動く。~~詳しくはよく分かってないのだが、Dalvik 環境下では Ruby のコードから DEX を、ART 環境下では LLVM が解釈できるコードをそれぞれ直接吐き出しているのだろうか？詳しい方教えてください。~~
+
+（9/24 追記）
+
+ART ランタイムについて勘違いしていたが、ART はインストール時に dex を端末内でコンパイルするものなので RubyMotion がどうこうとはあまり関係ないかも、と教えていただいた。ありがとうございます！
+
+ちなみに [公式ブログ](http://blog.rubymotion.com/post/87048665656/rubymotion-3-0-sneak-peek-android-support "RubyMotion 3.0 Sneak Peek: Android Support") を読んでいたら、**RubyMotion for Android では Ruby のコードを LLVM ベースの静的コンパイラで直接 ARM のマシン語に変換し、ランタイムは JNI 越しにそれらのコードにアクセスして実行される**のだと解説してあった。素晴らしい。
+
+（追記ここまで）
 
 ※2 JDK 7 だと署名時のコマンドライン引数が変わっていて普通に adb install しようとしても入らない端末(or version?) がある。[このへん](http://java.dzone.com/articles/android-solution-install-parse-1) 参照。
 
