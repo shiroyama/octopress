@@ -3,7 +3,7 @@
 # ----------------------- #
 
 url: http://blog.shiroyama.us
-title: 白山軟件有限公司
+title: $shiroyama->($blog);
 subtitle:
 author: Fumihiko Shiroyama
 simple_search: http://google.com/search
@@ -69,7 +69,7 @@ github_show_profile_link: true
 github_skip_forks: true
 
 # Twitter
-twitter_user: fushiroyama
+twitter_user: _aodai_
 twitter_tweet_button: true
 
 # Google +1
