@@ -3,7 +3,7 @@
 # ----------------------- #
 
 url: http://blog.shiroyama.us
-title: $shiroyama->($blog);
+title: post <$> shiroyama <*> blog
 subtitle:
 author: Fumihiko Shiroyama
 simple_search: http://google.com/search
