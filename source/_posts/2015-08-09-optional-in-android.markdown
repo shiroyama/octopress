@@ -1,13 +1,13 @@
 ---
 layout: post
-title: "Android で Optional<T> 使おう"
+title: "Android で Optional<T> を使おう"
 date: 2015-08-09 22:09:12 +0900
 comments: true
 categories: Android Optional RxJava RxAndroid
 ---
 
-[Shibuya.apk #2](http://shibuya-apk.connpass.com/event/16640/ "Shibuya.apk #2") というイベントで登壇させていただきました。資料は[ここ](http://www.slideshare.net/fumihikoshiroyama/rxjavaoptionalandroid "Rxjavaとoptionalで関数型androidしよう")にあります。  
-テーマは「RxjavaとOptionalで関数型Androidしよう」ですが昨今の巷での関数型言語の流行りに便乗した釣りタイトルです。誠に申し訳ございません。  
+[Shibuya.apk #2](http://shibuya-apk.connpass.com/event/16640/ "Shibuya.apk #2") というイベントで登壇させていただきました。資料は[ここ](http://www.slideshare.net/fumihikoshiroyama/rxjavaoptionalandroid "RxJavaとOptionalで関数型Androidしよう")にあります。  
+テーマは「RxJavaとOptionalで関数型Androidしよう」ですが昨今の巷での関数型言語の流行りに便乗した釣りタイトルです。誠に申し訳ございません。  
 で、そのテーマの前半部分である `Optional<T>` についてここで詳しくまとめておきたいと思います。
 
 ### Optionalとは何か
@@ -17,7 +17,7 @@ Haskell でいう `Maybe a  =  Nothing | Just a` です。Scalaでいう `Option
 `Optional<String>` ってのがあると、文字列があるかもしれないしないかもしれないって意味になります。
 
 これの何が嬉しいかっつーと `if (str != null && !TextUtils.isEmpty(str))` みたいなつまらないボイラープレートを書かなくて済むんですよ。  
-あと、これが一番大事なので最初に書くけど、 **Optionalの中身があるかどうか気にせずOptionalオブジェクトをmapで写したりできる** んです。これは死ぬほど大事なので後でコード例とともに示します。  
+あと、これが一番大事なので最初に書くけど、 **Optionalの中身があるかどうか気にせずOptionalをmapで写したりできる** んです。これは死ぬほど大事なので後でコード例とともに示します。  
 あとはまあ、 `Optional<T>` って書いとくと **ああこれは中身がnullになりうるんだな** ってことが仕様としてハッキリします。これはドキュメントに書くより、`@Nullable` 修飾するより強力です。
 
 ### AndroidはJava8使えない
