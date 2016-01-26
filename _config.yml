@@ -3,7 +3,7 @@
 # ----------------------- #
 
 url: http://blog.shiroyama.us
-title: post <$> shiroyama <*> blog
+title: do blog <- post
 subtitle:
 author: Fumihiko Shiroyama
 simple_search: http://google.com/search
